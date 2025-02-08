@@ -1,0 +1,147 @@
+{
+  "SystemInfo": {
+    "Name": "string",
+    "DomainMember": "string",
+    "DomainFQDN": "string",
+    "Username": "string",
+    "InstalledOS": "string",
+    "ServicePack": "string",
+    "SystemType": "string",              // Expected values: "x86" or "x64"
+    "Version": "string",
+    "LicenseStatus": "string",           // Example: "Licensed" or "Unknown"
+    "CurrentSystemLocale": "string",
+    "CurrentTimeZone": "string"
+  },
+  "Hardware": {
+    "PhysicalMemory": "string",          // e.g., "16.00 GB"
+    "PageFileMemory": "string",          // e.g., "1.00 GB"
+    "PhysicalProcessors": "integer",
+    "LogicalProcessors": "integer",
+    "VideoCard": {
+      "Description": "string",
+      "Resolution": "string"             // e.g., "1920x1080"
+    }
+  },
+  "DriveInfo": [
+    {
+      "Name": "string",                  // e.g., "C:"
+      "Label": "string",                 // Volume label
+      "TotalSpace": "string",            // e.g., "500.00 GB"
+      "FreeSpace": "string",             // e.g., "200.00 GB"
+      "DriveType": "string",             // e.g., "Local Disk", "Removable Disk", "CD-ROM"
+      "FileSystem": "string"             // e.g., "NTFS", "FAT32"
+    }
+  ],
+  "PerformanceSnapshot": {
+    "CPU": {
+      "IdleTime": "string",              // e.g., "75.00%"
+      "CPUTime": "string"                // e.g., "25.00%"
+    },
+    "Memory": {
+      "TotalMemory": "string",           // e.g., "16.00 GB"
+      "AvailableMemory": "string",       // e.g., "8.00 GB"
+      "PageFaultsPerSecond": "string"    // e.g., "10.00"
+    }
+  },
+  "Networking": {
+    "NetworkBindingOrder": "string",     // e.g., "Ethernet, Wi-Fi"
+    "NetworkAdapters": [
+      {
+        "Name": "string",                // Adapter name/description
+        "ConnectionStatus": "string",    // Adapter connection metric or status
+        "DHCPEnabled": "boolean",
+        "IPAddress": "string",           // One or more addresses separated by commas
+        "SubnetMask": "string",
+        "DefaultGateway": "string",
+        "DNSAddress": "string"
+      }
+    ]
+  },
+  "TerminalServices": {
+    "ServerSettings": {
+      "Name": "string",
+      "TSNode": "string",
+      "AllowTSConnections": "string",    // Expected: "Y" or "N"
+      "LicensingType": "string",
+      "LicensingName": "string",
+      "UserLogonMode": "string",
+      "UserPermissions": "string"
+    },
+    "SessionNames": [
+      "string"
+    ]
+  },
+  "Peripherals": {
+    "Printers": [
+      {
+        "Name": "string",
+        "Driver": "string",
+        "Type": "string",                // e.g., "Network" or "Local"
+        "Port": "string"
+      }
+    ]
+  },
+  "InstalledPrograms": [
+    {
+      "Name": "string",
+      "Version": "string",
+      "Size": "string",                  // e.g., "150 MB" or "N/A"
+      "InstalledLocation": "string",
+      "Status": "string"                 // "Global" or "User only"
+    }
+  ],
+  "Services": [
+    {
+      "Name": "string",
+      "Description": "string",
+      "Status": "string",
+      "StartupType": "string",
+      "LogOnAs": "string"
+    }
+  ],
+  "ScheduledTasks": [
+    {
+      "Name": "string",
+      "Status": "string",
+      "Triggers": "string",              // A concatenated string of triggers
+      "RunTime": "string",
+      "RunResultHistory": [
+        "string"
+      ]
+    }
+  ],
+  "HotfixesAndUpdates": [
+    {
+      "HotFixID": "string",
+      "Description": "string",
+      "InstalledOn": "string"
+    }
+  ],
+  "EventLogs": {
+    "System": [
+      {
+        "TimeGenerated": "string",
+        "EntryType": "string",
+        "Source": "string",
+        "Message": "string"
+      }
+    ],
+    "Application": [
+      {
+        "TimeGenerated": "string",
+        "EntryType": "string",
+        "Source": "string",
+        "Message": "string"
+      }
+    ]
+  },
+  "FirewallRules": [
+    {
+      "Name": "string",
+      "Enabled": "string",               // e.g., "True" or "False"
+      "Direction": "string",             // e.g., "Inbound", "Outbound"
+      "Action": "string",                // e.g., "Allow", "Block"
+      "Profile": "string"                // e.g., "Domain", "Private", "Public"
+    }
+  ]
+}
